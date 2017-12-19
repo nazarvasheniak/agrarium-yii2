@@ -81,7 +81,12 @@ var Modal = function() {
 
         self.show(this.target)
 
-        return true
+        document.body.onclick = function(event) {
+            if (!event.target.offsetParent) {
+                event.stopPropagation()
+                self.close(modal)
+            }
+        }
     }
 
     this.close = function(modal) {
@@ -100,8 +105,6 @@ var Modal = function() {
         })
 
         self.hide(this.target)
-
-        return true
     }
 }
 

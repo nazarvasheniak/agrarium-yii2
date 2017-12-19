@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 ?>
 
-<div class="modal_window registration_name front" data-type="modal" data-modal="registration_main">
+<div class="modal_window registration_name" data-type="modal" data-modal="registration_main">
     <button class="modal_close"></button>
 
     <div class="modal_tabs">
@@ -32,7 +32,7 @@
     </div>
 </div>
 
-<div class="modal_window authorization_main back" data-type="modal" data-modal="authorization_main">
+<div class="modal_window authorization_main" data-type="modal" data-modal="authorization_main">
     <button class="modal_close"></button>
     
     <div class="modal_tabs">

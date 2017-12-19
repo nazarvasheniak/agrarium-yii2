@@ -2299,7 +2299,9 @@ main.modal-open {
 }
 
 .checkbox-custom input[type="checkbox"] {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
 }
 
 .checkbox-custom input:checked+label {
