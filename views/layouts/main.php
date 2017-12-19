@@ -39,13 +39,17 @@ AppAsset::register($this);
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <?= $content ?>
+    <main>
+        <?= $content ?>
+    </main>
 
     <!-- Modal overlay -->
     <div class="overlay"></div>
 
     <!-- Modal container -->
-    <div class="modal_container"></div>
+    <div class="modal_container">
+        <?=$this->render('/site/_modal.php')?>
+    </div>
 
 
     <script src="/js/jquery-3.2.1.min.js"></script>

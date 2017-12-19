@@ -1877,15 +1877,30 @@ body.modal-open {
     overflow-y: hidden;
 }
 
+.md-perspective,
+.md-perspective body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.md-perspective body {
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective: 600px;
+}
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .7);
     width: 100%;
     height: 100%;
     z-index: 10;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .modal_container {
@@ -1896,7 +1911,10 @@ body.modal-open {
     top: 0;
     left: 0;
     z-index: 11;
-    display: none;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .modal_container .modal_window {
@@ -1907,11 +1925,44 @@ body.modal-open {
     left: calc(50% - 208px);
     background: #fff;
     border-radius: 8px;
-    display: none;
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    transform: translateY(-5%);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal_container.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+main.modal-open {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .modal_container .modal_window.open {
-    display: block;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal_container .modal_window .modal_close {

@@ -247,33 +247,18 @@ $('.play_btn').click(function() {
 
 
 // Reg & Auth
-var headerbuttons = document.querySelectorAll('header button');
+/* var headerbuttons = document.querySelectorAll('header button');
 
 Object.keys(headerbuttons).map(function(key, index) {
 
     // Click event
-    headerbuttons[key].onclick = function() {
+    headerbuttons[key].onclick = function(event) {
 
-        // if click on reg button
-        if (headerbuttons[key].dataset.toggle == 'reg') {
+        //var $this = $(this);
 
-            // open modal
-            var modal = new Modal({
-                'modal': 'test',
-            })
+        // open modal
+        var modal = new Modal()
 
-            modal.showOverlay()
-        }
-
-        // if click on auth button
-        if (headerbuttons[key].dataset.toggle == 'auth') {
-
-            // open modal
-            var modal = new Modal({
-                'modal': 'test',
-            })
-
-            modal.showOverlay()
-        }
+        modal.open({ 'action': this.dataset.toggle })
     }
-})
+}) */

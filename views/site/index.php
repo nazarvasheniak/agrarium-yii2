@@ -20,8 +20,8 @@ $this->title = 'Agrarium | Home';
                             <a href="" class="item item3">Whitepaper</a>
                         </nav>
                         <div class="btn_groups">
-                            <button class="registration" data-toggle="reg">Регистрация</button>
-                            <button class="enter" data-toggle="auth">Вход</button>
+                            <button class="registration modal-trigger" data-action="registration">Регистрация</button>
+                            <button class="enter modal-trigger" data-action="authorization">Вход</button>
                         </div>
                         <div class="menu_close menu_toggle"></div>
                     </div>
