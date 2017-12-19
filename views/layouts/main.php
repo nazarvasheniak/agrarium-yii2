@@ -41,9 +41,19 @@ AppAsset::register($this);
 
     <?= $content ?>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="assets/swiper/js/swiper.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Modal overlay -->
+    <div class="overlay"></div>
+
+    <!-- Modal container -->
+    <div class="modal_container"></div>
+
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/swiper/js/swiper.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Modal JS -->
+    <script src="/js/modal.js"></script>
 
     <?php $this->endBody() ?>
 </body>
