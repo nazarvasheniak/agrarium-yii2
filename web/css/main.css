@@ -1874,19 +1874,13 @@ footer .soc_icon img {
 /*modals*/
 
 body.modal-open {
-    overflow-y: hidden;
-}
-
-.md-perspective,
-.md-perspective body {
-    height: 100%;
+    /* background-color: #000; */
     overflow: hidden;
+    padding-right: 17px;
 }
 
-.md-perspective body {
-    -webkit-perspective: 600px;
-    -moz-perspective: 600px;
-    perspective: 600px;
+main.modal-open {
+    /* background-color: #fff; */
 }
 
 .overlay {
@@ -1895,6 +1889,7 @@ body.modal-open {
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, .7);
     z-index: 10;
     opacity: 0;
     visibility: hidden;
@@ -1939,6 +1934,7 @@ body.modal-open {
 .modal_container.open {
     visibility: visible;
     opacity: 1;
+    overflow-y: scroll;
 }
 
 .overlay.open {

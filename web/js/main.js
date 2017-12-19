@@ -244,21 +244,3 @@ $('.play_btn').click(function() {
     $('.video_preview').fadeOut();
     $('.video_wrap').append('<iframe width="560" height="377" src="https://www.youtube.com/embed/Hi-CTlR3YxA?autoplay=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="ytube_video"></iframe> ');
 });
-
-
-// Reg & Auth
-/* var headerbuttons = document.querySelectorAll('header button');
-
-Object.keys(headerbuttons).map(function(key, index) {
-
-    // Click event
-    headerbuttons[key].onclick = function(event) {
-
-        //var $this = $(this);
-
-        // open modal
-        var modal = new Modal()
-
-        modal.open({ 'action': this.dataset.toggle })
-    }
-}) */

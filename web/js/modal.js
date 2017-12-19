@@ -1,17 +1,23 @@
 // Modal
+
+var headerbuttons = document.querySelectorAll('header button');
+
 var Modal = function() {
     var self = this;
 
-    this.overlay = document.querySelector('.overlay');
-    this.container = document.querySelector('.modal_container');
-    this.main = document.querySelector('main');
+    this.props = {
+        'overlay': document.querySelector('.overlay'),
+        'container': document.querySelector('.modal_container'),
+        'body': document.body,
+        'main': document.querySelector('main')
+    }
 
     this.modals = {
         'registration': 'registration_main',
         'authorization': 'authorization_main',
     }
 
-    this.getModalByAction = function(action) {
+    this.getModalName = function(action) {
 
         if (!self.modals[action]) {
             return false
@@ -21,37 +27,78 @@ var Modal = function() {
     }
 
     this.getModal = function(action) {
-        this.name = self.getModalByAction(action)
-
-        if (!this.name) {
+        if (!action) {
             return false
         }
 
+        this.name = self.getModalName(action)
         this.modal = document.querySelector('.modal_window[data-modal="' + this.name + '"]')
 
         return this.modal
     }
 
-    this.open = function(data) {
-        this.target = self.getModal(data.action);
+    this.show = function(element) {
+        if (!element) {
+            return false
+        }
 
-        this.target.classList.add('open');
-        self.container.classList.add('open');
-        self.overlay.classList.add('open');
-        self.main.classList.add('modal-open');
+        this.element = element;
+        this.element.classList.add('open');
+
+        return true
     }
 
-    this.close = function(target) {
-        this.target = self.getModal(target);
+    this.hide = function(element) {
+        if (!element) {
+            return false
+        }
 
-        this.target.classList.remove('open');
-        self.container.classList.remove('open');
-        self.overlay.classList.remove('open');
-        self.main.classList.remove('modal-open');
+        this.element = element;
+        this.element.classList.remove('open');
+
+        return true;
+    }
+
+    this.open = function(modal) {
+        if (!modal) {
+            return false
+        }
+
+        this.target = self.getModal(modal);
+
+        Object.keys(self.props).map(function(key, index) {
+            if (key == 'main' || key == 'body') {
+                self.props[key].classList.add('modal-open')
+            } else {
+                self.show(self.props[key])
+            }
+        })
+
+        self.show(this.target)
+
+        return true
+    }
+
+    this.close = function(modal) {
+        if (!modal) {
+            return false
+        }
+
+        this.target = self.getModal(modal);
+
+        Object.keys(self.props).map(function(key, index) {
+            if (key == 'main' || key == 'body') {
+                self.props[key].classList.remove('modal-open')
+            } else {
+                self.hide(self.props[key])
+            }
+        })
+
+        self.hide(this.target)
+
+        return true
     }
 }
-
-var headerbuttons = document.querySelectorAll('header button');
 
 Object.keys(headerbuttons).map(function(key, index) {
 
@@ -61,15 +108,12 @@ Object.keys(headerbuttons).map(function(key, index) {
         // open modal
         var self = this;
         var modal = new Modal();
-        var data = {
-            'action': self.dataset.action
-        }
+        var action = self.dataset.action
 
-        modal.open(data);
-        modal.getModal(data.action).querySelector('.modal_close').onclick = function(event) {
-            console.log(modal);
+        modal.open(action);
+        modal.getModal(action).querySelector('.modal_close').onclick = function(event) {
             event.stopPropagation();
-            modal.close(data.action);
+            modal.close(action);
         }
     }
 })
