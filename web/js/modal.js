@@ -12,6 +12,11 @@ var Modal = function() {
         'main': document.querySelector('main')
     }
 
+    this.flip = {
+        'front': document.querySelector('.flip_wrapper .front'),
+        'back': document.querySelector('.flip_wrapper .back')
+    }
+
     this.modals = {
         'registration': 'registration_main',
         'authorization': 'authorization_main',

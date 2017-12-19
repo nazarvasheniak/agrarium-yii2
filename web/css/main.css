@@ -1910,6 +1910,15 @@ main.modal-open {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1200;
+    perspective: 1200;
+    -moz-transform: perspective(1200px);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .modal_container .modal_window {
@@ -1925,7 +1934,12 @@ main.modal-open {
     -ms-transform: translateY(-5%);
     transform: translateY(-5%);
     visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
     opacity: 0;
+    -webkit-animation: turn 2s infinite;
+    animation: turn 2s infinite;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
