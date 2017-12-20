@@ -2570,7 +2570,7 @@ main.modal-open {
 @media screen and (max-width: 1080px) {
     @media screen and (max-width: 1080px) {
         .products_block {
-            background: url(../img/milk.png) no-repeat 51px 14%, url(../img/spica.png) no-repeat 51px 48%, url(../img/meat.png) no-repeat 51px 82%;
+            background: url(../img/milk.png) no-repeat 51px 14%, url(../img/spica.png) no-repeat 51px center, url(../img/meat.png) no-repeat 51px 86%;
             background-color: #fff;
         }
         .decor_wrap {
@@ -2994,7 +2994,7 @@ main.modal-open {
 @media screen and (max-width: 650px) {
     .products_block {
         padding: 65px 20px 20px;
-        background: url(../img/milk.png) no-repeat 14% 15px, url(../img/spica.png) no-repeat 48% 15px, url(../img/meat.png) no-repeat 82% 15px;
+        background: url(../img/milk.png) no-repeat 14% 15px, url(../img/spica.png) no-repeat center 15px, url(../img/meat.png) no-repeat 86% 15px;
         background-color: #fff;
         padding: 80px 40px 40px;
     }
@@ -3529,8 +3529,9 @@ main.modal-open {
     
     .products_block {
         padding: 65px 20px 20px;
-        background: url(../img/milk.png) no-repeat 14% 8px, url(../img/spica.png) no-repeat 48% 8px, url(../img/meat.png) no-repeat 82% 8px;
-        background-color: #fff;
+        url(../img/milk.png) no-repeat 14% 8px,
+        url(../img/spica.png) no-repeat center 8px,
+        url(../img/meat.png) no-repeat 86% 8px background-color: #fff;
     }
     
     .forecast_block .consultants_block,
