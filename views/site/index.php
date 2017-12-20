@@ -59,7 +59,17 @@ $this->title = 'Agrarium | Home';
                         </div>
                     </div>
                 </div>
+                <div class="collected_block">
+                    <div class="title">Собрано</div>
+                    <div class="items">
+                        <div class="item">0.001 BTC </div>
+                        <div class="item">0.012 ETH</div>
+                        <div class="item">17.235 LTC</div>
+                        <div class="item">29.153 DASH</div>
+                    </div>
+                </div>
                 <div class="btns">
+                    <button class="onepage">Onepage</button>
                     <button class="whitepaper">whitepaper</button>
                     <button class="buy_tokens">Купить токены</button>
                 </div>
@@ -85,9 +95,8 @@ $this->title = 'Agrarium | Home';
                     <div class="range"></div>
                 </div>
                 <div class="targets">
-                    <div class="item">цель 1</div>
-                    <div class="item">цель 2</div>
-                    <div class="item">цель 3</div>
+                    <div class="item">SOFTCAP 4 760 000$</div>
+                    <div class="item">HARDCAP 15 000 000$</div>
                 </div>
             </div>
             <div class="how_work">
@@ -95,7 +104,6 @@ $this->title = 'Agrarium | Home';
                 <div class="undertext">Посмотрите видео</div>
                 <div class="video_wrap">
                     <img src="img/video_img.png" alt="" class="video_preview">
-
                     <button class="play_btn"></button>
                 </div>
             </div>
@@ -379,7 +387,7 @@ $this->title = 'Agrarium | Home';
                 </div>
                 <div class="info_block">
                     <div class="title">Экономическая модель</div>
-                    <div class="undertext">Общая эмиссия — 993 800 000</div>
+                    <div class="undertext">Общая эмиссия — 993 800 000 <div class="agr">AGR</div></div>
                     <div class="item">
                         <span class="procent">43%</span>
                         <span class="circle darkblue"></span>
@@ -393,7 +401,7 @@ $this->title = 'Agrarium | Home';
                     <div class="item">
                         <span class="procent">12%</span>
                         <span class="circle green"></span>
-                        <span>116 000 000 — Исследование и разработка</span>
+                        <span>116 000 000 — Технобаунти</span>
                     </div>
                     <div class="item">
                         <span class="procent">7%</span>
@@ -404,7 +412,7 @@ $this->title = 'Agrarium | Home';
                         <span class="procent">6%</span>
                         <span class="circle orange"></span>
                         <span>59 500 000 — На Pre-ICO —</span>
-                        <span class="discount">40% скидка</span>
+                        <span class="discount">20% скидка</span>
                     </div>
                     <div class="item">
                         <span class="procent">3%</span>
@@ -416,7 +424,7 @@ $this->title = 'Agrarium | Home';
         </div>
     </div>
     <div class="forecast_block">
-        <div class="absolute_block">
+        <!-- <div class="absolute_block">
             <div class="item item1">
                 <div class="procent">102%</div>
                 <div class="text">В год на этапе Pre-ICO</div>
@@ -426,7 +434,7 @@ $this->title = 'Agrarium | Home';
                 <div class="text">В ГОД НА ЭТАПЕ ICO</div>
             </div>
             <div class="garant_text">Гарантированная доходность</div>
-        </div>
+        </div> -->
         <div class="forecast_title">Прогнозируемая цена AGR</div>
         <div class="graf">
             <img src="img/dashed.png" alt="" class="graph_img">
