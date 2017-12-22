@@ -2,6 +2,9 @@
 
 /* @var $this yii\web\View */
 
+use app\widgets\Alert;
+use yii\helpers\Html;
+
 $this->title = 'Agrarium | Home';
 ?>
 
@@ -21,8 +24,16 @@ $this->title = 'Agrarium | Home';
                                 <a href="" class="item item3">Whitepaper</a>
                             </nav>
                             <div class="btn_groups">
-                                <button class="registration modal-trigger" data-action="registration">Регистрация</button>
-                                <button class="enter modal-trigger" data-action="authorization">Вход</button>
+                                <?php if(Yii::$app->user->isGuest) { ?>
+                                    <button class="registration modal-trigger" data-action="registration">Регистрация</button>
+                                    <button class="enter modal-trigger" data-action="authorization">Вход</button>
+                                <?php } else { ?>
+                                    <div class="user"><?= Yii::$app->user->identity->username ?></div>
+                                    <div class=" balance">12.8 AGR</div>
+                                    <?= Html::beginForm(['/site/logout'], 'post') ?>
+                                    <?= Html::submitButton('Выйти', ['class' => 'exit']) ?>
+                                    <?= Html::endForm() ?>
+                                <?php } ?>
                             </div>
                             <div class="menu_close menu_toggle"></div>
                         </div>
