@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=agrarium',
-    'username' => 'agrarium',
+    'dsn' => 'mysql:host=localhost;dbname=n90531zf_agr',
+    'username' => 'n90531zf_agr',
     'password' => 'qwerty12345',
     'charset' => 'utf8',
 

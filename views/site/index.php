@@ -104,8 +104,10 @@ $this->title = 'Agrarium | Home';
                     <div class="title">Как работает Аграриум?</div>
                     <div class="undertext">Посмотрите видео</div>
                     <div class="video_wrap">
-                        <img src="img/video_img.png" alt="" class="video_preview">
-                        <button class="play_btn"></button>
+                        <div class="video-youtube video-youtube_overlay">
+                            <div id="video-youtube__content" class="video-youtube__content video-youtube__content_hide-origin-play-btn"></div>
+                            <button type="button" class="video-youtube__new-play-btn"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -388,7 +390,9 @@ $this->title = 'Agrarium | Home';
                     </div>
                     <div class="info_block">
                         <div class="title">Экономическая модель</div>
-                        <div class="undertext">Общая эмиссия — 993 800 000 <div class="agr">AGR</div></div>
+                        <div class="undertext">Общая эмиссия — 993 800 000
+                            <div class="agr">AGR</div>
+                        </div>
                         <div class="item">
                             <span class="procent">43%</span>
                             <span class="circle darkblue"></span>
@@ -507,33 +511,33 @@ $this->title = 'Agrarium | Home';
                 <div class="label_row">
                     <div class="label_year">2017</div>
                     <div class="circle_type1 mobile"></div>
-                    <div class="label_desc">Pre-ICO</div>
+                    <div class="label_desc">Pre-ICO
+                        <div class="label_value">1 AGR = 0.08$</div>
+                    </div>
                 </div>
                 <div class="label_row">
                     <div class="label_year">2018</div>
                     <div class="circle_type1 mobile2"></div>
-                    <div class="label_desc">Молоко из золота</div>
+                    <div class="label_desc">Запуск площадки, биржи<br> продуктовых токенов
+                        <div class="label_value">1 AGR = 0.5$</div>
+                    </div>
                 </div>
                 <div class="label_row">
                     <div class="label_year">2019</div>
                     <div class="circle_type1 mobile3"></div>
-                    <div class="label_desc">Теломеризация</div>
+                    <div class="label_desc">Масштабирование<br> по миру
+                        <div class="label_value">1 AGR = 0.3$</div>
+                    </div>
                 </div>
             </div>
 
             <div class="products_block">
                 <div class="text">
-                    AGR - это Технологии. Не надо привязывать к продуктовым токенам. 
-                    В чем ценность Агр? Ценность в технологиях, ноу-хау и в 
-                    смартконтрактах между участниками бизнес процесса. Из 100% 
-                    эмиссии токенов AGR 62% - технологические стартапы и ноу-хау, 
-                    анализ и расчет параметров смарт-контактов (адаптация) в регионах, 
-                    38% - инвестиции в разработку, маркетинг.
+                    AGR - это Технологии. Не надо привязывать к продуктовым токенам. В чем ценность Агр? Ценность в технологиях, ноу-хау и в смартконтрактах между участниками бизнес процесса. Из 100% эмиссии токенов AGR 62% - технологические стартапы и ноу-хау, анализ и
+                    расчет параметров смарт-контактов (адаптация) в регионах, 38% - инвестиции в разработку, маркетинг.
                 </div>
                 <div class="text">
-                    Продуктовые жетоны (токены) - это еда с историей - продукты из 
-                    мяса, молока и зерна. На привлеченные рубли и криптовалюту 
-                    проводится масштабирование платформы в республиках и странах.
+                    Продуктовые жетоны (токены) - это еда с историей - продукты из мяса, молока и зерна. На привлеченные рубли и криптовалюту проводится масштабирование платформы в республиках и странах.
                 </div>
             </div>
 
@@ -706,211 +710,5 @@ $this->title = 'Agrarium | Home';
                     </a>
                 </div>
             </footer>
-        </div>
-
-        <div class="overlay">
-        </div>
-        <div class="modal_container">
-
-            <div class="modal_window registration_name">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Регистрация</div>
-                    <div class="tab_item tab_item2">Авторизация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите имя">
-                    </div>
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите E-mail">
-                    </div>
-                    <div class="under_field_block">
-                        <div class="checkbox-wrap">
-                            <div class="checkbox-custom">
-                                <input type="checkbox" id="conditions_agree">
-                                <label for="conditions_agree"></label>
-                            </div>
-                            <div class="checkbox-text">Я согласен <a href="">с Условиями предоставления услуг</a></div>
-                        </div>
-                    </div>
-                    <button class="blue_btn small">ПРОДОЛЖИТЬ</button>
-                </div>
-            </div>
-
-            <div class="modal_window registration_pass">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Регистрация</div>
-                    <div class="tab_item tab_item2">Авторизация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите пароль">
-                        <div class="error">
-                            Пароль не соответсвует правилам безопасности, 
-                            придумайте новый или проверьте раскладку клавиатуры
-                        </div>
-                    </div>
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Повторите пароль">
-                    </div>
-                    <div class="under_field_block">
-                        <div class="checkbox-wrap">
-                            <div class="checkbox-custom">
-                                <input type="checkbox" id="display_pass">
-                                <label for="display_pass"></label>
-                            </div>
-                            <div class="checkbox-text">Отображать вводимые символы</div>
-                        </div>
-                    </div>
-                    <button class="blue_btn small">ПРОДОЛЖИТЬ</button>
-                    <div class="modal_bottom_text">
-                        Длина пароля должна быть не менее 8 символов. Пароль должен состоять из букв латинского алфавита (A-z), арабских цифр (0-9). Буквенная часть пароля должна содержать какстрочные, так и прописные (заглавные) буквы.
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal_window registration_phone">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Регистрация</div>
-                    <div class="tab_item tab_item2">Авторизация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="+7 (___) ___-__-__">
-                    </div>
-                    <div class="blue_btn small">ПРОДОЛЖИТЬ</div>
-                    <div class="modal_bottom_text">
-                        В целях вашей безопасности, мы задействовали двухфакторную авторизацию, для этого вам необходимо указать номер вашего мобильного, на который мы отправим СМС с кодом, чтобы подтвердить его.
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal_window registration_phone_code">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Регистрация</div>
-                    <div class="tab_item tab_item2">Авторизация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите код из смс">
-                        <div class="error">
-                            Вы ввели не верный код, попробуйте 
-                            еще раз или отправьте код повторно
-                        </div>
-                    </div>
-                    <button class="blue_btn small">ПОДТВЕРДИТЬ</button>
-                    <div class="phone_code_block">
-                        <span class="code_time">0:29 с.</span>
-                        <a>Отправить код повторно</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal_window registration_thanks">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Регистрация</div>
-                    <div class="tab_item tab_item2">Авторизация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="thanks_text_block">
-                        <div class="thanks_title">Спасибо за регистрацию!</div>
-                        <div class="thanks_text">
-                            Пожалуйста, проверьте свою почту и нажмите на ссылку для активации аккаунта
-                        </div>
-                    </div>
-                    <button class="onward_btn">ALEXEY@PRO-CONVERSION</button>
-
-                </div>
-            </div>
-
-            <div class="modal_window authorization_main">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Авторизация</div>
-                    <div class="tab_item tab_item2">Регистрация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите E-mail">
-                    </div>
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите пароль">
-                    </div>
-                    <div class="under_field_block">
-                        <div class="checkbox-wrap">
-                            <div class="checkbox-custom">
-                                <input type="checkbox" id="remember_me">
-                                <label for="remember_me"></label>
-                            </div>
-                            <div class="checkbox-text">Запомнить меня</div>
-                        </div>
-                        <a class="forgot_pass">Я забыл свой пароль</a>
-                    </div>
-                    <button class="blue_btn small">ПРОДОЛЖИТЬ</button>
-                </div>
-            </div>
-
-            <div class="modal_window authorization_sms">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_tabs">
-                    <div class="tab_item tab_item1">Регистрация</div>
-                    <div class="tab_item tab_item2">Авторизация</div>
-                </div>
-                <div class="modal_content">
-                    <div class="authoriz_sms_text">
-                        Мы отправили проверочный смс код на ваш номер <span class="phone_number">+7(927)***-**-05</span>
-                    </div>
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="Введите код из смс">
-                        <div class="error">
-                            Вы ввели не верный код, попробуйте 
-                            еще раз или отправьте код повторно
-                        </div>
-                    </div>
-                    <button class="blue_btn small">ПОДТВЕРДИТЬ</button>
-                    <div class="phone_code_block">
-                        <span class="code_time">0:29 с.</span>
-                        <a>Отправить код повторно</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal_window recover recover_phone">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_content">
-                    <div class="title">Восстановление</div>
-                    <div class="text">
-                        Введите номер телефона указанный при регистрации:
-                    </div>
-                    <div class="field_wrap">
-                        <input type="text" class="def_field" placeholder="+7 (___) ___-__-__">
-                        <div class="error">
-                            Пользователь с таким номером не 
-                            зарегистрирован в нашей системе, проверьте набранный номер
-                        </div>
-                    </div>
-                    <button class="blue_btn small">ПРОДОЛЖИТЬ</button>
-                    <button class="back_btn">Вернуться</button>
-                </div>
-            </div>
-
-            <div class="modal_window recover recover_complete">
-                <button class="modal_close">Закрыть</button>
-                <div class="modal_content">
-                    <div class="title">Восстановление</div>
-                    <div class="text">
-                        Мы отправили новый пароль на ваш номер, если он не приходит долгое время, повторите процедуру восстановления или напишите нам в тех.поддержку: support@agrarium.io
-                    </div>
-                    <button class="blue_btn large">АВТОРИЗОВАТЬСЯ С НОВЫМ ПАРОЛЕМ</button>
-                    <button class="back_btn">Вернуться</button>
-                </div>
-            </div>
-
-
         </div>
     </div>

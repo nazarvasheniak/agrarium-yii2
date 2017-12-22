@@ -455,7 +455,7 @@ body {
     line-height: 20px;
     text-align: right;
     padding-right: 62px;
-    padding-bottom: 34px;
+    padding-bottom: 30px;
     display: flex;
     font-family: 'SF-UI-Display-Bold';
     align-items: flex-end;
@@ -560,6 +560,13 @@ body {
     text-transform: uppercase;
     padding-left: 66px;
     text-align: left;
+    transition: .5s ease;
+}
+
+.main_block .top_content .content_wrap .btns .whitepaper:hover,
+.main_block .top_content .content_wrap .btns .onepage:hover {
+    -webkit-filter: invert(5%);
+    filter: invert(5%);
 }
 
 .main_block .top_content .content_wrap .btns .onepage {
@@ -570,6 +577,7 @@ body {
     background-color: #090513;
     border-radius: 10px;
     text-transform: uppercase;
+    transition: .5s ease;
 }
 
 .main_block .top_content .content_wrap .btns .buy_tokens {
@@ -770,6 +778,7 @@ body {
 .bottom_content .how_work .video_wrap iframe,
 .bottom_content .how_work .video_wrap video {
     width: 100%;
+    height: 100%;
     border-radius: 8px;
 }
 
@@ -2000,6 +2009,7 @@ main.modal-open {
     border-radius: 0 10px 10px 0;
     right: -44px;
     top: 0;
+    z-index: -1;
     font-size: 0;
 }
 
@@ -2756,6 +2766,11 @@ main.modal-open {
     }
 }
 @media screen and (max-width: 710px) {
+    .bottom_content .range_block {
+        display: flex;
+        align-items: flex-end;
+    }
+
     .bottom_content .range_block .range.rangeBar {
         animation: rangeBarHeight 3s;
         height: 9%;
@@ -2793,10 +2808,8 @@ main.modal-open {
     }
     
     .bottom_content .targets {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        padding: 55px 0;
+        flex-direction: column-reverse;
     }
     
     .bottom_content .range_block {
@@ -2807,7 +2820,6 @@ main.modal-open {
     
     .bottom_content .targets .item {
         width: auto;
-        height: 33%;
         padding-top: 0;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2820,7 +2832,7 @@ main.modal-open {
     .bottom_content .targets .item:before {
         width: 10px;
         height: 1px;
-        left: 75px;
+        left: 115%;
         top: 50%;
     }
     
@@ -3318,12 +3330,14 @@ main.modal-open {
     }
     
     .label_row {
+        height: 70px;
         visibility: visible;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         margin-left: 50px;
+        margin-bottom: 20px;
     }
     
     .point_label_mobile {
@@ -3574,33 +3588,19 @@ main.modal-open {
     }
     
     .bottom_content .targets {
-        -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
         order: 5;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
         padding-right: 0;
         padding-left: 68px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
     
     .bottom_content .range_block {
-        -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
         order: 6;
         margin-left: 40px;
         height: 433px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
         width: 30px;
         margin: 0;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
     }
     
     .bottom_content .range_block .range {
@@ -3875,4 +3875,72 @@ main.modal-open {
 }
 .owl-nav {
     display: none;
+}swiper-wrapper.team_people {
+    cursor: default;
+}
+.video-youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-youtube.video-youtube_overlay:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 5;
+}
+
+.video-youtube .video-youtube__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn {
+    width: 10000%;
+    height: 10000%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::-moz-selection {
+    background-color: transparent;
+}
+
+.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::selection {
+    background-color: transparent;
+}
+
+.video-youtube .video-youtube__new-play-btn {
+    border: none;
+    height: 80px;
+    width: 80px;
+    background-image: url(../img/play-arrow.svg), -moz-linear-gradient( 90deg, rgb(51, 0, 204) 0%, rgb(102, 0, 255) 100%);
+    background-image: url(../img/play-arrow.svg), -webkit-linear-gradient( 90deg, rgb(51, 0, 204) 0%, rgb(102, 0, 255) 100%);
+    background-image: url(../img/play-arrow.svg), -ms-linear-gradient( 90deg, rgb(51, 0, 204) 0%, rgb(102, 0, 255) 100%);
+    background-repeat: no-repeat;
+    background-position: 56% 50%, 100%;
+    background-size: 24px, 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
 }

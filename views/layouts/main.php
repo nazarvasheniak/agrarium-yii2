@@ -27,8 +27,8 @@ AppAsset::register($this);
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <?php $this->head() ?>
 </head>
@@ -52,12 +52,12 @@ AppAsset::register($this);
     </div>
 
 
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/assets/swiper/js/swiper.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="assets/swiper/js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- Modal JS -->
-    <script src="/js/modal.js"></script>
+    <script src="js/modal.js"></script>
 
     <?php $this->endBody() ?>
 </body>
