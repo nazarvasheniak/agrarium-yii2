@@ -1,6 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
 ?>
 
 <div class="modal_window registration_name" data-type="modal" data-modal="registration_main">
@@ -38,7 +41,7 @@
 </div>
 
 <div class="modal_window authorization_main" data-type="modal" data-modal="authorization_main">
-<button class="modal_close">Закрыть</button>
+    <button class="modal_close">Закрыть</button>
 
     <div class="modal_tabs">
         <div class="tab_item tab_item1">Авторизация</div>
