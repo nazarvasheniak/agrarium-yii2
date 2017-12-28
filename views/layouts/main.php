@@ -51,6 +51,7 @@ AppAsset::register($this);
 
 
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.spincrement.min.js"></script>
     <script src="assets/swiper/js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 

@@ -71,15 +71,6 @@ $this->title = 'Agrarium | Home';
                             </div>
                         </div>
                     </div>
-                    <div class="collected_block">
-                        <div class="title">Собрано</div>
-                        <div class="items">
-                            <div class="item">0.001 BTC </div>
-                            <div class="item">0.012 ETH</div>
-                            <div class="item">17.235 LTC</div>
-                            <div class="item">29.153 DASH</div>
-                        </div>
-                    </div>
                     <div class="btns">
                         <button class="onepage">Onepage</button>
                         <button class="whitepaper">whitepaper</button>
@@ -102,6 +93,16 @@ $this->title = 'Agrarium | Home';
                             <div class="value">0.1$</div>
                             <div class="text">1 AGR НА ICO ЭТАП 1</div>
                         </div>
+                    </div>
+                    <div class="collected_block">
+                        <div class="total_item">
+                            <div class="title">Собрано</div>
+                            <div class="sum numb_js1">0</div>
+                        </div>
+                        <div class="crypto_item BTH numb_js2">0</div>
+                        <div class="crypto_item ETH numb_js3">0</div>
+                        <div class="crypto_item LTH numb_js4">0</div>
+                        <div class="crypto_item DASH numb_js5">0</div>
                     </div>
                     <div class="range_block">
                         <div class="range"></div>
@@ -132,7 +133,7 @@ $this->title = 'Agrarium | Home';
                     </div>
                 </div>
                 <div class="item item2">
-                    <div class="title">Увеличение КПД</div>
+                    <div class="title">Технобаунти</div>
                     <div class="text">
                         Часть денег идет на разработку инновационных решений в сфере сельского хозяйства, которые позволят добиться еще большей отдачи от вложений
                     </div>
@@ -146,7 +147,7 @@ $this->title = 'Agrarium | Home';
                 <div class="item item4">
                     <div class="title">Мировая площадка</div>
                     <div class="text">
-                        Помимо дохода для инвесторов Agrarium создает мировую площадку экологичных и недорогих продуктов - это и является конечным продуктом и нашей миссией
+                        Конечная цель AGRARIUM - создать мировую площадку экологичных и недорогих продуктов, и обеспечить высокую доходность инвесторам AGR.
                     </div>
                 </div>
             </div>

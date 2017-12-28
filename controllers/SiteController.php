@@ -87,7 +87,7 @@ class SiteController extends Controller
             $model = new LoginForm();
             if ($model->load(Yii::$app->request->post())) {
                 if ($model->login()) {
-                    return $this->goBack();
+                    return $this->redirect('/web/index.php?r=cabinet%2Fdefault');
                 } else {
                     Yii::$app->response->format = yii\web\Response::FORMAT_JSON;
                     return \yii\widgets\ActiveForm::validate($model);
